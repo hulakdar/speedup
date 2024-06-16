@@ -1,7 +1,7 @@
 function setSpeed(speed)
 {
-  elem = document.getElementsByTagName("video")[0]
-  if(elem)
+  elements = document.getElementsByTagName("video")
+  for (let elem of elements)
   {
     elem.playbackRate=speed
   }
@@ -13,14 +13,6 @@ function setHighSpeed()
 {
   setSpeed(3)
 }
-function setMidSpeed()
-{
-  setSpeed(2)
-}
-function setLowSpeed()
-{
-  setSpeed(1)
-}
 
 if (window.attachEvent) {window.attachEvent('onload', setHighSpeed);}
 else if (window.addEventListener) {window.addEventListener('load', setHighSpeed, false);}
@@ -29,8 +21,9 @@ else {document.addEventListener('load', setHighSpeed, false);}
 document.addEventListener('keydown', function(event) {
   if (event.altKey)
   {
-    if (event.key === '3') setHighSpeed()
-    if (event.key === '2') setMidSpeed()
-    if (event.key === '1') setLowSpeed()
+    if (event.key === '4') setSpeed(3.5)
+    if (event.key === '3') setSpeed(2.5)
+    if (event.key === '2') setSpeed(2)
+    if (event.key === '1') setSpeed(1)
   }
 });

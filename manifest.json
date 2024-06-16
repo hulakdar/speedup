@@ -1,10 +1,10 @@
 {
-  "name": "Youtube/Twitch speedup",
+  "name": "Video content speedup",
   "description": "",
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [{
-    "matches": ["https://*.youtube.com/watch*", "https://*.twitch.tv/*" ],
+    "matches": ["https://*.youtube.com/watch*", "https://*.twitch.tv/*", "https://*.instagram.com/*", "https://*.x.com/*" , "https://*.twitter.com/*"],
     "js": ["content_script.js"]
   }]
 }
